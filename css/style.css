@@ -1,0 +1,112 @@
+@import url('https://gonts.google.com/css2?family=Fira+Sans+Condensed:wght@300;400;900&family=PT+Sans&family=Secular+One&display=swap');
+
+/*
+    font-family: 'Fira Sans Condensed', sans-serif; 300 400 900 - заголовки
+    font-family: 'PT Sans', sans-serif; 400 - обычный текст
+    font-family: 'Secular One', sans-serif; 400 - для логотипа
+*/
+
+body{
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.container{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+/* header */
+.header{
+    display: grid;
+    grid-template-rows: max-content;
+    grid-template-columns: 1fr 1fr 100px;
+    grid-template-areas: 'logo nav search';
+    /* grid-template: 'logo nav search' / 1fr 1fr 100px; */
+    
+    align-items: center;
+    justify-items: start;
+    padding: 20px 0;
+
+    text-transform: uppercase;
+
+    /* background-color: rgba(173, 255, 149, 0.5); */
+    overflow: hidden;
+}
+
+.logo{
+    font-family: 'Secular One', sans-serif;
+    font-weight: 400;
+    color: #EB564F;
+    font-size: 24px;
+    width: 150px;
+    line-height: 1;
+
+    grid-area: logo;
+    justify-self: end;
+}
+
+.header__nav{
+    grid-area: nav;
+}
+
+.header__nav-list{
+    display: flex;
+    gap: 10px;
+}
+
+.header__nav-link{
+    padding: 15px;
+    transition: color 0.2s;
+    position: relative;
+    display: inline-block;
+}
+
+.header__nav-link:hover ,.logo:hover{
+    color: #54B9B4;
+}
+
+.header__nav-link:active ,.logo{
+    color: #44a7a2;
+}
+
+.header__nav-link::after{
+    content: '';
+    display: block;
+    width: 80%;
+    height: 100%;
+
+    background-color: #54B9B4;
+
+    position: absolute;
+    left: 15px;
+    bottom: -200%;
+
+    transition: bottom 0.5s, background-color 0.2s;
+}
+
+.header__nav-link:hover:after{
+    bottom: -80%;
+}
+
+.header__nav-link:active:after{
+    background-color: #44a7a2;
+}
+
+
+.search{
+    grid-area: search;
+}
+
+.search__icon{
+    transition: fill 0.2s;
+}
+
+.search__icon:hover{
+    fill: #54B9B4;
+}
+
+.search__icon:active{
+    fill: #44a7a2;
+}
