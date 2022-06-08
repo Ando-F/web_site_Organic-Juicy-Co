@@ -20,13 +20,13 @@ body{
 /* header */
 .header{
     display: grid;
-    grid-template-rows: max-content;
-    grid-template-columns: 1fr 1fr 100px;
-    grid-template-areas: 'logo nav search';
-    /* grid-template: 'logo nav search' / 1fr 1fr 100px; */
-    
+/*     grid-template-rows: max-content; */
+/*     grid-template-columns: 1fr 1fr 100px; */
+/*     grid-template-areas: 'logo nav search'; */
+    grid-template: 'logo nav search' max-content/ 1fr 1fr 100px;
     align-items: center;
     justify-items: start;
+    
     padding: 20px 0;
 
     text-transform: uppercase;
